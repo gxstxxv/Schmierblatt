@@ -1,11 +1,9 @@
-gedanken
+gedanken:
 
-doppelpunkt kann im schmierblatt nicht verwendet werden
+fallingsand github
 
-schmierblatt -> funktion zum zeichnen via mouse input?
-schmierblatt code aufräumen
-schmierblatt vim bindings?
+schmierblatt github repo
 
-fallingsand github hochladen
+licenses für alle public repos
 
-schmierblatt schöne github repo
+simple git cli tool 

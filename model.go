@@ -86,6 +86,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			case key.Matches(msg, keys.insert):
 				m.schmierblatt.Focus()
 				m.focus["schmierblatt"] = true
+				return m, nil
 
 			}
 
