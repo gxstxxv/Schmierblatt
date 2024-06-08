@@ -9,7 +9,7 @@ var path = ""
 
 func read_file() string {
 
-	data, err := os.ReadFile(path + "/schmierblatt.txt")
+	data, err := os.ReadFile(path + "/assets/schmierblatt.txt")
 
 	if err != nil {
 		fmt.Printf("Error while reading file: %v", err)
@@ -21,7 +21,7 @@ func read_file() string {
 
 func write_file(data string) {
 
-	file, err := os.OpenFile(path + "/schmierblatt.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(path + "/assets/schmierblatt.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
 	if err != nil {
 		fmt.Printf("Error while opening file: %v", err)

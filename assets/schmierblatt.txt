@@ -6,8 +6,6 @@ schmierblatt -> funktion zum zeichnen via mouse input?
 schmierblatt code aufräumen
 schmierblatt vim bindings?
 
-schmierblatt und fallingsand github hochladen
+fallingsand github hochladen
 
-hallo welt wie geht es dir?
-
-das ist schön
+schmierblatt schöne github repo
