@@ -1,3 +1,4 @@
 # Schmierblatt
 
-![schmierblatt](https://github.com/gxstxxv/Schmierblatt/assets/144585373/2d56082b-45c8-43fa-901a-4fbd07383dc5)
+
+![example_video](https://github.com/gxstxxv/Schmierblatt/assets/144585373/b18d4699-7579-4bbf-af33-c8435711d332)
