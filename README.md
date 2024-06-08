@@ -1,3 +1,60 @@
 # Schmierblatt
+Welcome to Schmierblatt, a lightweight editor designed for quick, short, and easily reachable notes. As the name "Schmierblatt" (a German word meaning "scrap paper") suggests, this app provides a simple and efficient way to jot down your thoughts and ideas.
 
 ![example](https://github.com/gxstxxv/Schmierblatt/assets/144585373/ac51e1ea-f951-4dec-b7b5-f25481263341)
+
+## Overview
+
+Schmierblatt is inspired by the minimalist philosophy of the vim editor. It features a text area for note-taking and a small command input accessible via the colon key `:`. This setup allows for quick command executions without disrupting your writing flow.
+
+## Features
+
+- **Lightweight**: Schmierblatt is designed to be fast and efficient.
+- **Simple Interface**: A no-frills text area for your notes.
+- **Command Input**: Access commands quickly with the colon key `:`, reminiscent of vim.
+- **Built with Go**: Leveraging the performance and simplicity of the Go programming language.
+
+## Framework: Bubble Tea
+
+Schmierblatt is built using the Bubble Tea framework, a powerful and flexible library for building terminal applications. Bubble Tea is based on the Elm Architecture, which follows the Model-View-Update (MVU) pattern.
+
+### Bubble Tea Highlights
+
+- **Elm Architecture**: Utilizes the Model-View-Update (MVU) principle for clear and maintainable code structure.
+- **Go Language**: Combines the robustness of Go with the flexibility of terminal-based applications.
+- **User-Friendly**: Designed to make building interactive terminal applications straightforward and fun.
+
+## Getting Started
+
+To get started with Schmierblatt, clone the repository and build the project using Go:
+
+```sh
+git clone https://github.com/gxstxxv/schmierblatt.git
+cd schmierblatt
+go build
+./schmierblatt
+```
+
+## Usage
+
+- **Taking Notes**: Start typing in the text area.
+- **Commands**: Press the colon key `:` to access the command input.
+
+## Contributing
+
+We welcome contributions to improve Schmierblatt. Feel free to open issues or submit pull requests on GitHub.
+
+## License
+
+Schmierblatt is released under the MIT License. See the [LICENSE](https://github.com/gxstxxv/Schmierblatt/blob/main/LICENSE.md) file for details.
+
+## Acknowledgements
+
+- The Go Programming Language
+- Bubble Tea Framework
+
+Thank you for using Schmierblatt! Enjoy your note-taking experience.
+
+---
+
+For more information, visit the [Bubble Tea GitHub page](https://github.com/charmbracelet/bubbletea).
