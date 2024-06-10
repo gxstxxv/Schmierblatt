@@ -1,9 +1,1 @@
-gedanken:
-
-fallingsand github
-
-schmierblatt github repo
-
-licenses für alle public repos
-
-simple git cli tool 
+...
