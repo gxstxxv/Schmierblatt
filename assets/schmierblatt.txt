@@ -1,9 +1,16 @@
 gedanken:
 
-fallingsand github
+todo app in bubbletea via db?
 
-schmierblatt github repo
+fallingsand github
 
 licenses für alle public repos
 
 simple git cli tool 
+
+keytalk neu in bubbletea programmieren
+-> jetzt eher als chat zwischen(beep und boop) hehe
+-> chatverlauf unter input
+-> scrollable
+
+make schmierblatt file structure better
