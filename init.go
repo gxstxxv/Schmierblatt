@@ -47,6 +47,7 @@ func init_model() model {
 		focus: map[string]bool{
 			"schmierblatt": true,
 			"commandline": false,
+			"global": false,
 		},
 	}
 
