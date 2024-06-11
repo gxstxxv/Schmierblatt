@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Schmierblatt/app"
 	"fmt"
 	"os"
 
@@ -9,10 +10,10 @@ import (
 
 func main() {
 
-	init_path()
+	app.InitPath()
 
 	p := tea.NewProgram(
-		init_model(), 
+		app.InitModel(),
 		tea.WithAltScreen(),
 	)
 
@@ -22,4 +23,3 @@ func main() {
 	}
 
 }
-
