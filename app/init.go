@@ -24,6 +24,7 @@ func InitPath() {
 func initTextarea() textarea.Model {
 
 	t := textarea.New()
+	t.CharLimit = 0
 	t.Focus()
 	t.SetValue(readFile())
 
