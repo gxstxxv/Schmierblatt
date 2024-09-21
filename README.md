@@ -3,6 +3,19 @@ Welcome to Schmierblatt, a lightweight editor designed for quick, short, and eas
 
 ![example](https://github.com/gxstxxv/Schmierblatt/assets/144585373/4c6a5f35-2fa3-42c0-86da-6ed9a117b2f8)
 
+## Table of Contents
+
+1. [Schmierblatt](#schmierblatt)
+2. [Overview](#overview)
+3. [Features](#features)
+4. [Framework: Bubble Tea](#framework-bubble-tea)
+   - [Bubble Tea Highlights](#bubble-tea-highlights)
+5. [Getting Started](#getting-started)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Acknowledgements](#acknowledgements)
+
 ## Overview
 
 Schmierblatt is inspired by the minimalist philosophy of the vim editor. It features a text area for note-taking and a small command input accessible via the colon key `:`. This setup allows for quick command executions without disrupting your writing flow.
