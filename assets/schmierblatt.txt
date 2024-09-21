@@ -1,0 +1,16 @@
+schmierblatt:
+- textinput for filetree
+  - to add, delete, rename files 
+- tab function when writing "  "
+- vim bindings
+  - gg
+  - G
+  - dd 
+- show title of open file when in filetree
+- when trying to change file and not saved -> message
+
+spotify-cli:
+
+git-cli:
+
+

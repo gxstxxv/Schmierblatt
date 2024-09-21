@@ -2,18 +2,22 @@ package app
 
 import (
 	"github.com/charmbracelet/bubbles/key"
+	"github.com/charmbracelet/bubbles/list"
 	"github.com/charmbracelet/bubbles/textarea"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 )
 
-var borderStyle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#616161"))
-
 type Model struct {
-	schmierblatt textarea.Model
-	commandline  textinput.Model
-	focus        map[string]bool
+	schmierblatt        textarea.Model
+	commandline         textinput.Model
+	filemenu            list.Model
+	files               []string
+	selected_file_index int
+	open_file_index     int
+	focus               map[string]bool
+	width, height       int
 }
 
 func (m *Model) Init() tea.Cmd {
@@ -37,13 +41,17 @@ func (m *Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case m.focus["commandline"]:
 			cmd = m.handleCommandlineInput(msg)
 
+		case m.focus["filemenu"]:
+			cmd = m.handleFilemenuInput(msg)
+
 		case m.focus["global"]:
 			cmd = m.handleGlobalInput(msg)
 
 		}
 
 	case tea.WindowSizeMsg:
-		m.handleWindowInput(msg.Width, msg.Height)
+		m.width, m.height = msg.Width, msg.Height
+		m.updateModelSizes(m.width, m.height)
 
 	}
 
@@ -51,13 +59,32 @@ func (m *Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 }
 
+var borderStyle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#616161"))
+var filemenuStyle = lipgloss.NewStyle().Margin(1, 2)
+
 func (m *Model) View() string {
 
-	return lipgloss.JoinVertical(
-		lipgloss.Center,
-		borderStyle.Render(m.schmierblatt.View()),
-		borderStyle.Render(m.commandline.View()),
-	)
+	var view string
+
+	switch {
+
+	case !m.focus["filemenu"]:
+		view = lipgloss.JoinVertical(
+			lipgloss.Left,
+			borderStyle.Render(m.schmierblatt.View()),
+			borderStyle.Render(m.commandline.View()),
+		)
+
+	case m.focus["filemenu"]:
+		view = lipgloss.JoinHorizontal(
+			lipgloss.Top,
+			filemenuStyle.Render(m.filemenu.View()),
+			borderStyle.Render(m.schmierblatt.View()),
+		)
+
+	}
+
+	return view
 
 }
 
@@ -71,9 +98,50 @@ func (m *Model) handleGlobalInput(msg tea.KeyMsg) tea.Cmd {
 	case key.Matches(msg, keys.insert):
 		m.changeFocusTo("schmierblatt")
 
+	case key.Matches(msg, keys.tab):
+		m.changeFocusTo("filemenu")
+		m.updateModelSizes(m.width, m.height)
+
 	}
 
 	return nil
+
+}
+
+func (m *Model) handleFilemenuInput(msg tea.KeyMsg) tea.Cmd {
+
+	var cmd tea.Cmd
+
+	switch {
+
+	case key.Matches(msg, keys.tab):
+		m.changeFocusTo("global")
+		m.updateModelSizes(m.width, m.height)
+
+	case key.Matches(msg, keys.up):
+		if m.selected_file_index <= 0 {
+			return nil
+		}
+		m.selected_file_index -= 1
+
+	case key.Matches(msg, keys.down):
+		if m.selected_file_index >= len(m.files)-1 {
+			return nil
+		}
+		m.selected_file_index += 1
+
+	case key.Matches(msg, keys.right):
+		if m.open_file_index != m.selected_file_index {
+			return m.changeSchmierblattValue(msg)
+		}
+		m.changeFocusTo("global")
+		m.updateModelSizes(m.width, m.height)
+
+	}
+
+	m.filemenu, cmd = m.filemenu.Update(msg)
+
+	return cmd
 
 }
 
@@ -127,11 +195,11 @@ func (m *Model) handleCommand(value string) tea.Cmd {
 	switch value {
 
 	case "w":
-		writeFile(m.schmierblatt.Value())
+		writeFile(m.schmierblatt.Value(), m.files[m.selected_file_index])
 		m.commandline.Placeholder = "Schmierblatt has been saved!"
 
 	case "wq":
-		writeFile(m.schmierblatt.Value())
+		writeFile(m.schmierblatt.Value(), m.files[m.selected_file_index])
 		return tea.Quit
 
 	case "q":
@@ -143,10 +211,21 @@ func (m *Model) handleCommand(value string) tea.Cmd {
 
 }
 
-func (m *Model) handleWindowInput(width, height int) {
+const FilemenuWidth = 22
+const CommandlineHeight = 3
 
-	m.setSchmierblattSize(width-2, height-5)
-	m.setCommandlineSize(width - 5)
+func (m *Model) updateModelSizes(width, height int) {
+
+	var i, j int
+
+	if m.focus["filemenu"] {
+		i = FilemenuWidth
+		j = CommandlineHeight
+	}
+
+	m.setSchmierblattSize(width-2-i, height-5+j)
+	m.setCommandlineSize(width - 5 - i)
+	m.setFilemenuSize(width-1, height-2)
 
 }
 
@@ -166,7 +245,7 @@ func (m *Model) changeFocusTo(name string) {
 		m.schmierblatt.Blur()
 		m.commandline.Focus()
 
-	case "global":
+	case "global", "filemenu":
 		m.commandline.Blur()
 		m.schmierblatt.Blur()
 
@@ -183,6 +262,19 @@ func (m *Model) resetCommandline() {
 
 }
 
+func (m *Model) changeSchmierblattValue(msg tea.KeyMsg) tea.Cmd {
+
+	var cmd tea.Cmd
+
+	m.open_file_index = m.selected_file_index
+	m.filemenu.Select(m.selected_file_index)
+	m.schmierblatt.SetValue(readFile(m.files[m.selected_file_index]))
+	m.schmierblatt, cmd = m.schmierblatt.Update(msg)
+
+	return cmd
+
+}
+
 func (m *Model) setSchmierblattSize(width, height int) {
 
 	m.schmierblatt.SetHeight(height)
@@ -194,5 +286,11 @@ func (m *Model) setCommandlineSize(width int) {
 
 	m.commandline.Width = width
 	m.commandline.CharLimit = width
+
+}
+
+func (m *Model) setFilemenuSize(width, height int) {
+
+	m.filemenu.SetSize(width, height)
 
 }
