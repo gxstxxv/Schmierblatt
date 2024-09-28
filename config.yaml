@@ -1,0 +1,4 @@
+app:
+  assets_path: "./assets"
+  log_file: "./schmierblatt.log"
+  log_level: "info"
