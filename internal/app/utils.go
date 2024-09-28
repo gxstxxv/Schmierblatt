@@ -1,5 +1,10 @@
 package app
 
+import (
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/gxstxxv/schmierblatt/internal/logger"
+)
+
 func (m *Model) updateModelSizes() {
 	var i, j int
 	if m.focus["filemenu"] {

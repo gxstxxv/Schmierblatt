@@ -4,6 +4,8 @@ import (
 	"github.com/charmbracelet/bubbles/list"
 	"github.com/charmbracelet/bubbles/textarea"
 	"github.com/charmbracelet/bubbles/textinput"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/gxstxxv/schmierblatt/internal/logger"
 )
 
 const (
@@ -22,17 +24,21 @@ type Model struct {
 	width, height     int
 }
 
+func (m *Model) Init() tea.Cmd {
+	return nil
+}
+
 func InitModel() *Model {
 	files, err := readDir()
 	if err != nil {
 		logger.Error("Error reading directory", "error", err)
-		return nil
+		files = []string{} // Use an empty slice instead of nil
 	}
 
-	return &Model{
-		schmierblatt:      initTextarea(),
+	m := &Model{
+		schmierblatt:      initTextarea(files),
 		commandline:       initTextinput(),
-		filemenu:          initList(),
+		filemenu:          initList(files),
 		files:             files,
 		selectedFileIndex: 0,
 		openFileIndex:     0,
@@ -43,23 +49,22 @@ func InitModel() *Model {
 			"global":       true,
 		},
 	}
+
+	return m
 }
 
-func initTextarea() textarea.Model {
+func initTextarea(files []string) textarea.Model {
 	t := textarea.New()
 	t.CharLimit = 0
 	t.Blur()
-	files, err := readDir()
-	if err != nil {
-		logger.Error("Error reading directory", "error", err)
-		return t
+	if len(files) > 0 {
+		content, err := readFile(files[0])
+		if err != nil {
+			logger.Error("Error reading file", "error", err)
+		} else {
+			t.SetValue(content)
+		}
 	}
-	content, err := readFile(files[0])
-	if err != nil {
-		logger.Error("Error reading file", "error", err)
-		return t
-	}
-	t.SetValue(content)
 	return t
 }
 
@@ -70,28 +75,26 @@ func initTextinput() textinput.Model {
 	return t
 }
 
-func initList() list.Model {
+func initList(files []string) list.Model {
 	l := list.New([]list.Item{}, list.NewDefaultDelegate(), 0, 0)
 	l.SetShowTitle(false)
 	l.SetShowHelp(false)
 	l.SetFilteringEnabled(false)
 	l.DisableQuitKeybindings()
 
-	files, err := readDir()
-	if err != nil {
-		logger.Error("Error reading directory", "error", err)
-		return l
-	}
-	descs, err := readDesc()
-	if err != nil {
-		logger.Error("Error reading descriptions", "error", err)
-		return l
+	if len(files) > 0 {
+		descs, err := readDesc()
+		if err != nil {
+			logger.Error("Error reading descriptions", "error", err)
+			descs = make([]string, len(files)) // Use empty descriptions
+		}
+
+		items := make([]list.Item, 0, len(files))
+		for i, f := range files {
+			items = append(items, file{title: f, desc: descs[i]})
+		}
+		l.SetItems(items)
 	}
 
-	items := make([]list.Item, 0, len(files))
-	for i, f := range files {
-		items = append(items, file{title: f, desc: descs[i]})
-	}
-	l.SetItems(items)
 	return l
 }
