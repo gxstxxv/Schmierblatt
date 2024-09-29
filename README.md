@@ -43,7 +43,7 @@ To get started with Schmierblatt, clone the repository and build the project usi
 
 ```sh
 git clone https://github.com/gxstxxv/schmierblatt.git
-cd schmierblatt
+cd Schmierblatt/cmd/schmierblatt/
 go build
 ./schmierblatt
 ```
