@@ -38,3 +38,11 @@ INFO: 2024/09/29 20:32:49 logger.go:26: File written successfully file schmierbl
 INFO: 2024/09/29 20:32:49 logger.go:26: File saved successfully file schmierblatt.txt
 INFO: 2024/09/29 20:32:52 logger.go:26: File written successfully file gedanken.txt
 INFO: 2024/09/29 20:32:52 logger.go:26: File saved successfully, quitting file gedanken.txt
+INFO: 2024/09/29 20:34:32 logger.go:26: Quitting application
+INFO: 2024/09/29 20:57:51 logger.go:26: Quitting application
+INFO: 2024/09/29 20:58:06 logger.go:26: Quitting application
+INFO: 2024/09/29 20:58:13 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/29 20:58:13 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/29 20:58:18 logger.go:26: Quitting application
+INFO: 2024/09/29 20:58:35 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/29 20:58:35 logger.go:26: File saved successfully, quitting file schmierblatt.txt

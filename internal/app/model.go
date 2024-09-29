@@ -35,13 +35,16 @@ func InitModel() *Model {
 		files = []string{}
 	}
 
+	lastOpenedFile := getLastOpenedFile()
+	lastOpenedFileIndex := getLastOpenedFileIndex(lastOpenedFile, files)
+
 	m := &Model{
-		schmierblatt:      initTextarea(files),
+		schmierblatt:      initTextarea(files, lastOpenedFileIndex),
 		commandline:       initTextinput(),
 		filemenu:          initList(files),
 		files:             files,
-		selectedFileIndex: 0,
-		openFileIndex:     0,
+		selectedFileIndex: lastOpenedFileIndex,
+		openFileIndex:     lastOpenedFileIndex,
 		focus: map[string]bool{
 			"schmierblatt": false,
 			"commandline":  false,
@@ -53,12 +56,12 @@ func InitModel() *Model {
 	return m
 }
 
-func initTextarea(files []string) textarea.Model {
+func initTextarea(files []string, lastOpenedFileIndex int) textarea.Model {
 	t := textarea.New()
 	t.CharLimit = 0
 	t.Blur()
 	if len(files) > 0 {
-		content, err := readFile(files[0])
+		content, err := readFile(files[lastOpenedFileIndex])
 		if err != nil {
 			logger.Error("Error reading file", "error", err)
 		} else {

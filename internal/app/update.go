@@ -58,6 +58,7 @@ func (m *Model) handleFilemenuInput(msg tea.KeyMsg) tea.Cmd {
 		}
 	case key.Matches(msg, Keys.Right):
 		if m.openFileIndex != m.selectedFileIndex {
+			saveLastOpenedFile(m.files[m.selectedFileIndex])
 			return m.changeSchmierblattValue(msg)
 		}
 		m.changeFocusTo("global")

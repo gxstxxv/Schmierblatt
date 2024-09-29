@@ -9,9 +9,10 @@ import (
 
 type Config struct {
 	App struct {
-		AssetsPath string `yaml:"assets_path"`
-		LogFile    string `yaml:"log_file"`
-		LogLevel   string `yaml:"log_level"`
+		AssetsPath         string `yaml:"assets_path"`
+		LogFile            string `yaml:"log_file"`
+		LogLevel           string `yaml:"log_level"`
+		LastOpenedFilePath string `yaml:"last_opened_file_path"`
 	} `yaml:"app"`
 }
 
@@ -34,6 +35,7 @@ func LoadConfig(configPath string) error {
 	exeDir := filepath.Dir(configPath)
 	config.App.AssetsPath = filepath.Join(exeDir, config.App.AssetsPath)
 	config.App.LogFile = filepath.Join(exeDir, config.App.LogFile)
+	config.App.LastOpenedFilePath = filepath.Join(exeDir, config.App.LastOpenedFilePath)
 
 	return nil
 }

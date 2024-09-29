@@ -2,3 +2,4 @@ app:
   assets_path: "./assets"
   log_file: "schmierblatt.log"
   log_level: "info"
+  last_opened_file_path: "last_opened_file.txt"
