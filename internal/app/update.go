@@ -74,6 +74,10 @@ func (m *Model) handleSchmierblattInput(msg tea.KeyMsg) tea.Cmd {
 	switch {
 	case key.Matches(msg, Keys.Esc):
 		m.changeFocusTo("global")
+	case key.Matches(msg, Keys.Tab):
+		m.schmierblatt.InsertString("\t")
+		return nil
+
 	}
 
 	m.schmierblatt, cmd = m.schmierblatt.Update(msg)
