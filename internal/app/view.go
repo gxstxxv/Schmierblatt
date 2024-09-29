@@ -5,8 +5,9 @@ import (
 )
 
 var (
-	borderStyle   = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#616161"))
-	filemenuStyle = lipgloss.NewStyle().Margin(1, 2)
+	borderStyle      = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#616161"))
+	filemenuStyle    = lipgloss.NewStyle().Margin(1, 2)
+	commandlineStyle = lipgloss.NewStyle().Inherit(borderStyle)
 )
 
 func (m *Model) View() string {
@@ -14,7 +15,7 @@ func (m *Model) View() string {
 		return lipgloss.JoinVertical(
 			lipgloss.Left,
 			borderStyle.Render(m.schmierblatt.View()),
-			borderStyle.Render(m.commandline.View()),
+			commandlineStyle.Width(m.width-2).Render(m.commandline.View()),
 		)
 	}
 	return lipgloss.JoinHorizontal(

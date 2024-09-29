@@ -2,6 +2,7 @@ package app
 
 import (
 	"os"
+	"path/filepath"
 
 	"gopkg.in/yaml.v2"
 )
@@ -16,8 +17,8 @@ type Config struct {
 
 var config Config
 
-func LoadConfig() error {
-	f, err := os.Open("config.yaml")
+func LoadConfig(configPath string) error {
+	f, err := os.Open(configPath)
 	if err != nil {
 		return err
 	}
@@ -28,6 +29,11 @@ func LoadConfig() error {
 	if err != nil {
 		return err
 	}
+
+	// Convert relative paths to absolute paths
+	exeDir := filepath.Dir(configPath)
+	config.App.AssetsPath = filepath.Join(exeDir, config.App.AssetsPath)
+	config.App.LogFile = filepath.Join(exeDir, config.App.LogFile)
 
 	return nil
 }

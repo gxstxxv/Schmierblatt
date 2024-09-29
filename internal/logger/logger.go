@@ -10,8 +10,8 @@ var (
 	errorLogger *log.Logger
 )
 
-func Init() error {
-	file, err := os.OpenFile("schmierblatt.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+func Init(logPath string) error {
+	file, err := os.OpenFile(logPath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
 	}

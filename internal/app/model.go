@@ -32,7 +32,7 @@ func InitModel() *Model {
 	files, err := readDir()
 	if err != nil {
 		logger.Error("Error reading directory", "error", err)
-		files = []string{} // Use an empty slice instead of nil
+		files = []string{}
 	}
 
 	m := &Model{
