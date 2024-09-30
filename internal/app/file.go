@@ -68,6 +68,7 @@ func readFile(file string) (string, error) {
 	return string(data), nil
 }
 
+// TODO unterschiede erkannt
 func writeFile(data, fileName string) error {
 	filePath := filepath.Join(config.App.AssetsPath, fileName)
 	err := os.WriteFile(filePath, []byte(data), 0644)

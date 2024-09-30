@@ -19,3 +19,16 @@ INFO: 2024/09/30 11:24:04 logger.go:26: File saved successfully, quitting file s
 INFO: 2024/09/30 11:34:13 logger.go:26: Quitting application
 INFO: 2024/09/30 11:36:56 logger.go:26: Quitting application
 INFO: 2024/09/30 11:40:47 logger.go:26: Quitting application
+INFO: 2024/09/30 13:51:11 logger.go:26: File written successfully file markdown.md
+INFO: 2024/09/30 13:51:11 logger.go:26: File saved successfully, quitting file markdown.md
+INFO: 2024/09/30 13:51:47 logger.go:26: File written successfully file markdown.md
+INFO: 2024/09/30 13:51:47 logger.go:26: File saved successfully, quitting file markdown.md
+INFO: 2024/09/30 13:52:04 logger.go:26: File written successfully file markdown.md
+INFO: 2024/09/30 13:52:04 logger.go:26: File saved successfully file markdown.md
+INFO: 2024/09/30 13:52:42 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 13:52:42 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 13:52:59 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 13:52:59 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 13:53:19 logger.go:26: Quitting application
+INFO: 2024/09/30 13:53:36 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 13:53:36 logger.go:26: File saved successfully, quitting file schmierblatt.txt
