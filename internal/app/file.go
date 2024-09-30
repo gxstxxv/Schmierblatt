@@ -3,7 +3,6 @@ package app
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
@@ -62,7 +61,7 @@ func readDesc() ([]string, error) {
 }
 
 func readFile(file string) (string, error) {
-	data, err := ioutil.ReadFile(filepath.Join(config.App.AssetsPath, file))
+	data, err := os.ReadFile(filepath.Join(config.App.AssetsPath, file))
 	if err != nil {
 		return "", fmt.Errorf("error while reading file %s: %w", file, err)
 	}
@@ -71,7 +70,7 @@ func readFile(file string) (string, error) {
 
 func writeFile(data, fileName string) error {
 	filePath := filepath.Join(config.App.AssetsPath, fileName)
-	err := ioutil.WriteFile(filePath, []byte(data), 0644)
+	err := os.WriteFile(filePath, []byte(data), 0644)
 	if err != nil {
 		logger.Error("Failed to write file", "file", fileName, "error", err)
 		return err

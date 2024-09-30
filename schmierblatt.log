@@ -1,48 +1,21 @@
-ERROR: 2024/09/28 15:08:15 logger.go:30: Error reading directory error error reading directory: open ./assets: no such file or directory
-ERROR: 2024/09/28 15:10:02 logger.go:30: Error reading directory error error reading directory: open ./assets: no such file or directory
-INFO: 2024/09/28 15:10:07 logger.go:26: Quitting application
-INFO: 2024/09/28 15:12:47 logger.go:26: Quitting application
-INFO: 2024/09/28 15:24:17 logger.go:26: Quitting application
-INFO: 2024/09/28 15:24:30 logger.go:26: Quitting application
-INFO: 2024/09/29 15:04:37 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 15:04:37 logger.go:26: File saved successfully, quitting file gedanken.txt
-INFO: 2024/09/29 15:29:16 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 15:29:16 logger.go:26: File saved successfully file gedanken.txt
-INFO: 2024/09/29 15:30:46 logger.go:26: Quitting application
-INFO: 2024/09/29 15:31:00 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 15:31:00 logger.go:26: File saved successfully, quitting file gedanken.txt
-INFO: 2024/09/29 15:31:04 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 15:31:04 logger.go:26: File saved successfully, quitting file gedanken.txt
-INFO: 2024/09/29 20:18:59 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 20:18:59 logger.go:26: File saved successfully file gedanken.txt
-INFO: 2024/09/29 20:19:12 logger.go:26: Quitting application
-INFO: 2024/09/29 20:19:22 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 20:19:22 logger.go:26: File saved successfully file gedanken.txt
-INFO: 2024/09/29 20:19:29 logger.go:26: Quitting application
-INFO: 2024/09/29 20:19:37 logger.go:26: Quitting application
-INFO: 2024/09/29 20:19:59 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 20:19:59 logger.go:26: File saved successfully file gedanken.txt
-INFO: 2024/09/29 20:20:27 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 20:20:27 logger.go:26: File saved successfully file gedanken.txt
-INFO: 2024/09/29 20:21:04 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:21:04 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/29 20:21:34 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:21:34 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/29 20:31:06 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:31:06 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/29 20:31:46 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:31:46 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/29 20:31:48 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:31:48 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/29 20:32:49 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:32:49 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/29 20:32:52 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/29 20:32:52 logger.go:26: File saved successfully, quitting file gedanken.txt
-INFO: 2024/09/29 20:34:32 logger.go:26: Quitting application
-INFO: 2024/09/29 20:57:51 logger.go:26: Quitting application
-INFO: 2024/09/29 20:58:06 logger.go:26: Quitting application
-INFO: 2024/09/29 20:58:13 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:58:13 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/29 20:58:18 logger.go:26: Quitting application
-INFO: 2024/09/29 20:58:35 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/29 20:58:35 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 10:58:39 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 10:58:39 logger.go:26: File saved successfully file schmierblatt.txt
+INFO: 2024/09/30 10:58:47 logger.go:26: Quitting application
+INFO: 2024/09/30 10:58:52 logger.go:26: Quitting application
+INFO: 2024/09/30 10:59:16 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 10:59:16 logger.go:26: File saved successfully file schmierblatt.txt
+INFO: 2024/09/30 10:59:20 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 10:59:20 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 11:12:15 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 11:12:15 logger.go:26: File saved successfully file schmierblatt.txt
+INFO: 2024/09/30 11:12:21 logger.go:26: Quitting application
+INFO: 2024/09/30 11:12:51 logger.go:26: File written successfully file gedanken.txt
+INFO: 2024/09/30 11:12:51 logger.go:26: File saved successfully, quitting file gedanken.txt
+INFO: 2024/09/30 11:13:48 logger.go:26: Quitting application
+INFO: 2024/09/30 11:14:06 logger.go:26: Quitting application
+INFO: 2024/09/30 11:18:17 logger.go:26: Quitting application
+INFO: 2024/09/30 11:24:04 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 11:24:04 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 11:34:13 logger.go:26: Quitting application
+INFO: 2024/09/30 11:36:56 logger.go:26: Quitting application
+INFO: 2024/09/30 11:40:47 logger.go:26: Quitting application

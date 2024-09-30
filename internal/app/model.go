@@ -41,7 +41,7 @@ func InitModel() *Model {
 	m := &Model{
 		schmierblatt:      initTextarea(files, lastOpenedFileIndex),
 		commandline:       initTextinput(),
-		filemenu:          initList(files),
+		filemenu:          initList(files, lastOpenedFileIndex),
 		files:             files,
 		selectedFileIndex: lastOpenedFileIndex,
 		openFileIndex:     lastOpenedFileIndex,
@@ -56,12 +56,12 @@ func InitModel() *Model {
 	return m
 }
 
-func initTextarea(files []string, lastOpenedFileIndex int) textarea.Model {
+func initTextarea(files []string, selectedFileIndex int) textarea.Model {
 	t := textarea.New()
 	t.CharLimit = 0
 	t.Blur()
 	if len(files) > 0 {
-		content, err := readFile(files[lastOpenedFileIndex])
+		content, err := readFile(files[selectedFileIndex])
 		if err != nil {
 			logger.Error("Error reading file", "error", err)
 		} else {
@@ -78,7 +78,7 @@ func initTextinput() textinput.Model {
 	return t
 }
 
-func initList(files []string) list.Model {
+func initList(files []string, selectedFileIndex int) list.Model {
 	l := list.New([]list.Item{}, list.NewDefaultDelegate(), 0, 0)
 	l.SetShowTitle(false)
 	l.SetShowHelp(false)
@@ -97,6 +97,10 @@ func initList(files []string) list.Model {
 			items = append(items, file{title: f, desc: descs[i]})
 		}
 		l.SetItems(items)
+	}
+
+	if selectedFileIndex >= 0 && selectedFileIndex < len(files) {
+		l.Select(selectedFileIndex)
 	}
 
 	return l
