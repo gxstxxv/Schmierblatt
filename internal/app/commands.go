@@ -13,6 +13,7 @@ func (m *Model) handleCommand(value string) tea.Cmd {
 			logger.Error("Failed to save file", "error", err)
 		} else {
 			m.commandline.Placeholder = "Schmierblatt has been saved!"
+			m.filemenu = initList(m.files, m.selectedFileIndex)
 			logger.Info("File saved successfully", "file", m.files[m.selectedFileIndex])
 		}
 	case "wq":

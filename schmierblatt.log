@@ -32,3 +32,30 @@ INFO: 2024/09/30 13:52:59 logger.go:26: File saved successfully, quitting file s
 INFO: 2024/09/30 13:53:19 logger.go:26: Quitting application
 INFO: 2024/09/30 13:53:36 logger.go:26: File written successfully file schmierblatt.txt
 INFO: 2024/09/30 13:53:36 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/09/30 14:26:52 logger.go:26: File written successfully file markdown.md
+INFO: 2024/09/30 14:26:52 logger.go:26: File saved successfully file markdown.md
+INFO: 2024/09/30 14:27:38 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 14:27:38 logger.go:26: File saved successfully file schmierblatt.txt
+INFO: 2024/09/30 14:29:40 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/09/30 14:29:40 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/10/02 13:29:31 logger.go:26: File written successfully file schmierblatt.txt
+INFO: 2024/10/02 13:29:31 logger.go:26: File saved successfully, quitting file schmierblatt.txt
+INFO: 2024/10/02 13:33:31 logger.go:26: Quitting application
+INFO: 2024/10/02 13:41:07 logger.go:26: Quitting application
+INFO: 2024/10/02 13:45:15 logger.go:26: Quitting application
+INFO: 2024/10/02 13:56:56 logger.go:26: File written successfully file notes.txt
+INFO: 2024/10/02 13:56:56 logger.go:26: File saved successfully file notes.txt
+INFO: 2024/10/02 13:57:27 logger.go:26: Quitting application
+INFO: 2024/10/02 14:00:04 logger.go:26: File written successfully file notes.txt
+INFO: 2024/10/02 14:00:04 logger.go:26: File saved successfully file notes.txt
+INFO: 2024/10/02 14:00:17 logger.go:26: File written successfully file notes.txt
+INFO: 2024/10/02 14:00:17 logger.go:26: File saved successfully file notes.txt
+INFO: 2024/10/02 14:00:24 logger.go:26: File written successfully file notes.txt
+INFO: 2024/10/02 14:00:24 logger.go:26: File saved successfully file notes.txt
+INFO: 2024/10/02 14:00:33 logger.go:26: File written successfully file notes.txt
+INFO: 2024/10/02 14:00:33 logger.go:26: File saved successfully file notes.txt
+INFO: 2024/10/02 14:00:41 logger.go:26: Quitting application
+INFO: 2024/10/02 14:02:39 logger.go:26: Quitting application
+INFO: 2024/10/03 13:33:46 logger.go:26: Quitting application
+INFO: 2024/10/03 13:33:51 logger.go:26: Quitting application
+INFO: 2024/10/10 10:10:29 logger.go:26: Quitting application
