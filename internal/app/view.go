@@ -11,16 +11,19 @@ var (
 )
 
 func (m *Model) View() string {
-	if !m.focus["filemenu"] {
+	if m.focus["commandline"] {
 		return lipgloss.JoinVertical(
 			lipgloss.Left,
 			borderStyle.Render(m.schmierblatt.View()),
 			commandlineStyle.Width(m.width-2).Render(m.commandline.View()),
 		)
 	}
-	return lipgloss.JoinHorizontal(
-		lipgloss.Top,
-		filemenuStyle.Render(m.filemenu.View()),
-		borderStyle.Render(m.schmierblatt.View()),
-	)
+	if m.focus["filemenu"] {
+		return lipgloss.JoinHorizontal(
+			lipgloss.Top,
+			filemenuStyle.Render(m.filemenu.View()),
+			borderStyle.Render(m.schmierblatt.View()),
+		)
+	}
+	return borderStyle.Height(m.height - 2).Render(m.schmierblatt.View())
 }
