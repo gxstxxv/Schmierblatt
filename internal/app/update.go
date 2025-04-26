@@ -45,7 +45,7 @@ func (m *Model) handleFilemenuInput(msg tea.KeyMsg) tea.Cmd {
 	var cmd tea.Cmd
 
 	switch {
-	case key.Matches(msg, Keys.Tab):
+	case key.Matches(msg, Keys.Tab), key.Matches(msg, Keys.Esc):
 		m.changeFocusTo("global")
 		m.updateModelSizes()
 	case key.Matches(msg, Keys.Up):
@@ -62,6 +62,13 @@ func (m *Model) handleFilemenuInput(msg tea.KeyMsg) tea.Cmd {
 			return m.changeSchmierblattValue(msg)
 		}
 		m.changeFocusTo("global")
+		m.updateModelSizes()
+	case key.Matches(msg, Keys.Enter), key.Matches(msg, Keys.Open):
+		if m.openFileIndex != m.selectedFileIndex {
+			saveLastOpenedFile(m.files[m.selectedFileIndex])
+			m.changeSchmierblattValue(msg)
+		}
+		m.changeFocusTo("schmierblatt")
 		m.updateModelSizes()
 	}
 
