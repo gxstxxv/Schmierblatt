@@ -1,62 +1,41 @@
-INFO: 2024/09/30 10:58:39 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 10:58:39 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/30 10:58:47 logger.go:26: Quitting application
-INFO: 2024/09/30 10:58:52 logger.go:26: Quitting application
-INFO: 2024/09/30 10:59:16 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 10:59:16 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/30 10:59:20 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 10:59:20 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/30 11:12:15 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 11:12:15 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/30 11:12:21 logger.go:26: Quitting application
-INFO: 2024/09/30 11:12:51 logger.go:26: File written successfully file gedanken.txt
-INFO: 2024/09/30 11:12:51 logger.go:26: File saved successfully, quitting file gedanken.txt
-INFO: 2024/09/30 11:13:48 logger.go:26: Quitting application
-INFO: 2024/09/30 11:14:06 logger.go:26: Quitting application
-INFO: 2024/09/30 11:18:17 logger.go:26: Quitting application
-INFO: 2024/09/30 11:24:04 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 11:24:04 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/30 11:34:13 logger.go:26: Quitting application
-INFO: 2024/09/30 11:36:56 logger.go:26: Quitting application
-INFO: 2024/09/30 11:40:47 logger.go:26: Quitting application
-INFO: 2024/09/30 13:51:11 logger.go:26: File written successfully file markdown.md
-INFO: 2024/09/30 13:51:11 logger.go:26: File saved successfully, quitting file markdown.md
-INFO: 2024/09/30 13:51:47 logger.go:26: File written successfully file markdown.md
-INFO: 2024/09/30 13:51:47 logger.go:26: File saved successfully, quitting file markdown.md
-INFO: 2024/09/30 13:52:04 logger.go:26: File written successfully file markdown.md
-INFO: 2024/09/30 13:52:04 logger.go:26: File saved successfully file markdown.md
-INFO: 2024/09/30 13:52:42 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 13:52:42 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/30 13:52:59 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 13:52:59 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/30 13:53:19 logger.go:26: Quitting application
-INFO: 2024/09/30 13:53:36 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 13:53:36 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/09/30 14:26:52 logger.go:26: File written successfully file markdown.md
-INFO: 2024/09/30 14:26:52 logger.go:26: File saved successfully file markdown.md
-INFO: 2024/09/30 14:27:38 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 14:27:38 logger.go:26: File saved successfully file schmierblatt.txt
-INFO: 2024/09/30 14:29:40 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/09/30 14:29:40 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/10/02 13:29:31 logger.go:26: File written successfully file schmierblatt.txt
-INFO: 2024/10/02 13:29:31 logger.go:26: File saved successfully, quitting file schmierblatt.txt
-INFO: 2024/10/02 13:33:31 logger.go:26: Quitting application
-INFO: 2024/10/02 13:41:07 logger.go:26: Quitting application
-INFO: 2024/10/02 13:45:15 logger.go:26: Quitting application
-INFO: 2024/10/02 13:56:56 logger.go:26: File written successfully file notes.txt
-INFO: 2024/10/02 13:56:56 logger.go:26: File saved successfully file notes.txt
-INFO: 2024/10/02 13:57:27 logger.go:26: Quitting application
-INFO: 2024/10/02 14:00:04 logger.go:26: File written successfully file notes.txt
-INFO: 2024/10/02 14:00:04 logger.go:26: File saved successfully file notes.txt
-INFO: 2024/10/02 14:00:17 logger.go:26: File written successfully file notes.txt
-INFO: 2024/10/02 14:00:17 logger.go:26: File saved successfully file notes.txt
-INFO: 2024/10/02 14:00:24 logger.go:26: File written successfully file notes.txt
-INFO: 2024/10/02 14:00:24 logger.go:26: File saved successfully file notes.txt
-INFO: 2024/10/02 14:00:33 logger.go:26: File written successfully file notes.txt
-INFO: 2024/10/02 14:00:33 logger.go:26: File saved successfully file notes.txt
-INFO: 2024/10/02 14:00:41 logger.go:26: Quitting application
-INFO: 2024/10/02 14:02:39 logger.go:26: Quitting application
-INFO: 2024/10/03 13:33:46 logger.go:26: Quitting application
-INFO: 2024/10/03 13:33:51 logger.go:26: Quitting application
-INFO: 2024/10/10 10:10:29 logger.go:26: Quitting application
-INFO: 2025/04/17 21:22:28 logger.go:26: Quitting application
+INFO: 2025/04/22 11:55:28 logger.go:26: Quitting application
+INFO: 2025/04/22 11:58:14 logger.go:26: Quitting application
+INFO: 2025/04/22 11:59:02 logger.go:26: Quitting application
+INFO: 2025/04/22 12:01:36 logger.go:26: Quitting application
+INFO: 2025/04/22 12:02:58 logger.go:26: Quitting application
+INFO: 2025/04/22 12:03:14 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:03:14 logger.go:26: File saved successfully file test.txt
+INFO: 2025/04/22 12:03:20 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:03:20 logger.go:26: File saved successfully file test.txt
+INFO: 2025/04/22 12:03:25 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:03:25 logger.go:26: File saved successfully, quitting file test.txt
+INFO: 2025/04/22 12:03:30 logger.go:26: Quitting application
+INFO: 2025/04/22 12:04:25 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:04:25 logger.go:26: File saved successfully file test.txt
+INFO: 2025/04/22 12:04:30 logger.go:26: Quitting application
+INFO: 2025/04/22 12:17:49 logger.go:26: Quitting application
+INFO: 2025/04/22 12:20:21 logger.go:26: Quitting application
+INFO: 2025/04/22 12:23:16 logger.go:26: Quitting application
+INFO: 2025/04/22 12:27:16 logger.go:26: Quitting application
+INFO: 2025/04/22 12:28:20 logger.go:26: Quitting application
+INFO: 2025/04/22 12:28:52 logger.go:26: Quitting application
+INFO: 2025/04/22 12:32:15 logger.go:26: Quitting application
+INFO: 2025/04/22 12:32:19 logger.go:26: Quitting application
+INFO: 2025/04/22 12:32:54 logger.go:26: Quitting application
+INFO: 2025/04/22 12:33:06 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:33:06 logger.go:26: File saved successfully file test.txt
+INFO: 2025/04/22 12:33:54 logger.go:26: Quitting application
+INFO: 2025/04/22 12:34:05 logger.go:26: Quitting application
+INFO: 2025/04/22 12:34:41 logger.go:26: File written successfully file test.txt
+INFO: 2025/04/22 12:34:41 logger.go:26: File saved successfully file test.txt
+INFO: 2025/04/22 12:34:59 logger.go:26: File written successfully file notes.txt
+INFO: 2025/04/22 12:34:59 logger.go:26: File saved successfully file notes.txt
+INFO: 2025/04/22 12:36:00 logger.go:26: Quitting application
+INFO: 2025/04/22 12:36:39 logger.go:26: Quitting application
+INFO: 2025/04/22 12:37:45 logger.go:26: File written successfully file notes.txt
+INFO: 2025/04/22 12:37:45 logger.go:26: File saved successfully file notes.txt
+INFO: 2025/04/22 12:37:53 logger.go:26: Quitting application
+INFO: 2025/04/22 12:38:44 logger.go:26: Quitting application
+INFO: 2025/04/22 18:27:20 logger.go:26: File written successfully file notes.txt
+INFO: 2025/04/22 18:27:20 logger.go:26: File saved successfully, quitting file notes.txt
+INFO: 2025/04/22 18:27:27 logger.go:26: Quitting application

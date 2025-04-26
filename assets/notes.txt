@@ -1,1 +1,14 @@
-hello world!
+for (size_t i = 0; i < tokens_in.count; ) {
+  if (i + 1>= tokens_in.count) {
+    da_append(&tokens_out, tokens_in.items[i]);
+    i += 1;
+  } else {
+    Pair pair = {.l = tokens_in.items[i], .r = tokens_in.items[i + 1]};
+    if (memcmp(&pair, &freq[max_index].key, sizeof (pair)) == 0) {
+      da_append(&tokens_out, pair.count - 1);
+      i += 2;
+    ｝else {
+      da_append (&tokens_out, tokens_in.items[il);
+      i += 1;
+    }
+}
