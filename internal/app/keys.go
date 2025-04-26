@@ -14,6 +14,7 @@ type KeyMap struct {
 	Up     key.Binding
 	Down   key.Binding
 	Right  key.Binding
+	Open   key.Binding
 }
 
 var Keys = KeyMap{
@@ -28,6 +29,10 @@ var Keys = KeyMap{
 	Enter: key.NewBinding(
 		key.WithKeys("enter"),
 		key.WithHelp("enter", "Confirm"),
+	),
+	Open: key.NewBinding(
+		key.WithKeys("o"),
+		key.WithHelp("o", "Open"),
 	),
 	Quit: key.NewBinding(
 		key.WithKeys("ctrl+c"),
