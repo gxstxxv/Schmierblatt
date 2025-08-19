@@ -1,4 +1,5 @@
 # Schmierblatt
+
 Welcome to Schmierblatt, a lightweight editor designed for quick, short, and easily reachable notes. As the name "Schmierblatt" (a German word meaning "scrap paper") suggests, this app provides a simple and efficient way to jot down your thoughts and ideas.
 
 ![example](https://github.com/gxstxxv/Schmierblatt/assets/144585373/4c6a5f35-2fa3-42c0-86da-6ed9a117b2f8)
@@ -43,15 +44,15 @@ To get started with Schmierblatt, clone the repository and build the project usi
 
 ```sh
 git clone https://github.com/gxstxxv/schmierblatt.git
-cd Schmierblatt/cmd/schmierblatt/
-go build
+cd schmierblatt/
+go build -o schmierblatt cmd/schmierblatt/main.go
 ./schmierblatt
 ```
 
-## Usage
+## Usage (Vim-like)
 
 - **Taking Notes**: Start typing in the text area.
-- **Commands**: Press the colon key `:` to access the command input.
+- **Commands**: Press the colon key `:` to access the command input and `tab` to enter the fileexplorer.
 
 ## Contributing
 
